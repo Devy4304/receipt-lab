@@ -5,6 +5,7 @@ public class Item {
     public int quantity = 0;
     public String receiptItemName;
     public String commonName;
+    public String pluralCommonName;
 
     public Item(double pricePerItem, String receiptItemName) {
         this.pricePerItem = pricePerItem;
@@ -15,6 +16,15 @@ public class Item {
         this.pricePerItem = pricePerItem;
         this.receiptItemName = receiptItemName;
         this.commonName = commonName;
+        this.pluralCommonName = commonName + "s";
+    }
+
+    // Custom plural common name constructor for "Batteries"
+    public Item(double pricePerItem, String receiptItemName, String commonName, String pluralCommonName) {
+        this.pricePerItem = pricePerItem;
+        this.receiptItemName = receiptItemName;
+        this.commonName = commonName;
+        this.pluralCommonName = pluralCommonName;
     }
 
     public void setQuantity(int quantity) {
@@ -33,7 +43,7 @@ public class Item {
         return String.valueOf(getTotalPriceFormatted()).length();
     }
 
-    public String getItemForList() {
+    public String getItemForPriceList() {
         return "*     " + commonName + Utility.getChars(13 - commonName.length(), ".") + " $" + Utility.formatDouble(pricePerItem) + Utility.getSpaces(16 - Utility.formatDouble(pricePerItem).length()) + "*";
     }
 

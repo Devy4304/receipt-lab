@@ -10,7 +10,7 @@ class ReceiptPart5 {
         Item[] items = getItems();
 
         for (Item item : items) {
-            System.out.print("How many " + item.commonName + "s would you like? ");
+            System.out.print("How many " + item.pluralCommonName + " would you like? ");
             item.setQuantity(input.nextInt());
             subTotal += item.getTotalPrice();
         }
@@ -24,7 +24,7 @@ class ReceiptPart5 {
         System.out.println("*     Miner's Hardware Store         *");
         System.out.println("*                                    *");
         for (Item item : items) {
-            System.out.println(item.getItemForList());
+            System.out.println(item.getItemForPriceList());
         }
         System.out.println("*                                    *");
         System.out.println("**************************************");
@@ -56,7 +56,7 @@ class ReceiptPart5 {
         Item lightBulb = new Item(9.99,  "LIGHT BULB   ", "Light Bulb");
         Item hammer = new Item(19.99,    "HAMMER       ", "Hammer");
         Item SDCard = new Item(14.99,    "SD CARD      ", "SD Card");
-        Item AABattery = new Item(5.99,  "AA BATTERY   ", "AA Battery");
+        Item AABattery = new Item(5.99,  "AA BATTERY   ", "AA Battery", "AA Batteries");
         Item superGlue = new Item(8.99,  "SUPER GLUE   ", "Super Glue");
         Item insulation = new Item(34.99,"INSULATION   ", "Insulation");
 
