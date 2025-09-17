@@ -28,7 +28,7 @@ class Receipt {
         System.out.print("How many hamburgers would you like? ");
         hamburger.setQuantity(input.nextInt());
 
-        int orderNumber = (int) (Math.random() * 100 + 1);
+        int orderNumber = (int) (Math.random() * 101 + 1);
 
         double subTotal = candy.getTotalPrice() + drink.getTotalPrice() + hotDog.getTotalPrice() + hamburger.getTotalPrice();
         double taxRate = 0.05;
