@@ -39,10 +39,10 @@ class Receipt {
         System.out.println("*                                    *");
         System.out.println("*     " + highSchool.getInitials() + " Snack Bar" + highSchoolNameSpaces + "*");
         System.out.println("*                                    *");
-        System.out.println("*     Drink ..........$" + FoodItem.formatDouble(drink.pricePerItem) + "          *");
-        System.out.println("*     Candy ..........$" + FoodItem.formatDouble(candy.pricePerItem) + "          *");
-        System.out.println("*     Hot Dog ........$" + FoodItem.formatDouble(hotDog.pricePerItem) + "          *");
-        System.out.println("*     Hamburger ......$" + FoodItem.formatDouble(hamburger.pricePerItem) + "          *");
+        System.out.println("*     Drink ..........$" + Utility.formatDouble(drink.pricePerItem) + "          *");
+        System.out.println("*     Candy ..........$" + Utility.formatDouble(candy.pricePerItem) + "          *");
+        System.out.println("*     Hot Dog ........$" + Utility.formatDouble(hotDog.pricePerItem) + "          *");
+        System.out.println("*     Hamburger ......$" + Utility.formatDouble(hamburger.pricePerItem) + "          *");
         System.out.println("*                                    *");
         System.out.println("**************************************");
         // Print more info
@@ -57,9 +57,9 @@ class Receipt {
         System.out.println(hamburger);
         System.out.println("**************************************");
         // Totals
-        System.out.println("*  SUBTOTAL       " + FoodItem.formatDouble(subTotal) + FoodItem.getSpaces(19 - FoodItem.formatDouble(subTotal).length()) + "*");
-        System.out.println("*  TAX            " + FoodItem.formatDouble(totalTax) + FoodItem.getSpaces(19 - FoodItem.formatDouble(totalTax).length()) + "*");
-        System.out.println("*  TOTAL          " + FoodItem.formatDouble(total) + FoodItem.getSpaces(19 - FoodItem.formatDouble(total).length()) + "*");
+        System.out.println("*  SUBTOTAL       " + Utility.formatDouble(subTotal) + Utility.getSpaces(19 - Utility.formatDouble(subTotal).length()) + "*");
+        System.out.println("*  TAX            " + Utility.formatDouble(totalTax) + Utility.getSpaces(19 - Utility.formatDouble(totalTax).length()) + "*");
+        System.out.println("*  TOTAL          " + Utility.formatDouble(total) + Utility.getSpaces(19 - Utility.formatDouble(total).length()) + "*");
         System.out.println("**************************************");
     }
 }
