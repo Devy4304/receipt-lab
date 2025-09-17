@@ -1,11 +1,11 @@
 package com.devin.receipt_lab;
 
-public class FoodItem {
+public class Item {
     public final double pricePerItem;
     public int quantity = 0;
     public String receiptItemName;
 
-    public FoodItem(double pricePerItem, String receiptItemName) {
+    public Item(double pricePerItem, String receiptItemName) {
         this.pricePerItem = pricePerItem;
         this.receiptItemName = receiptItemName;
     }
@@ -27,6 +27,6 @@ public class FoodItem {
     }
 
     public String toString() {
-        return "*  " + quantity + Utility.getSpaces(5 - String.valueOf(quantity).length()) + receiptItemName + getTotalPriceFormatted() + Utility.getSpaces(19 - getLengthOfTotalPriceFormatted()) + "*";
+        return "*  " + quantity + Utility.getSpaces(6 - String.valueOf(quantity).length()) + receiptItemName + getTotalPriceFormatted() + Utility.getSpaces(18 - getLengthOfTotalPriceFormatted()) + "*";
     }
 }
