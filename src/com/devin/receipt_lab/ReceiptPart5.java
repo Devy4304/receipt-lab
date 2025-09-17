@@ -58,7 +58,7 @@ class ReceiptPart5 {
         Item SDCard = new Item(14.99,    "SD CARD      ", "SD Card");
         Item AABattery = new Item(5.99,  "AA BATTERY   ", "AA Battery");
         Item superGlue = new Item(8.99,  "SUPER GLUE   ", "Super Glue");
-        Item insulation = new Item(34.99,  "INSULATION   ", "Insulation");
+        Item insulation = new Item(34.99,"INSULATION   ", "Insulation");
 
         return new Item[]{bolts, solderRoll, lightBulb, hammer, SDCard, AABattery, superGlue, insulation};
     }
